@@ -188,6 +188,13 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\myStyle.css" />
+    <Content Include="Content\plugins\font-awesome\all.min.css" />
+    <Content Include="Content\plugins\font-awesome\brands.min.css" />
+    <Content Include="Content\plugins\font-awesome\fontawesome.min.css" />
+    <Content Include="Content\plugins\font-awesome\regular.min.css" />
+    <Content Include="Content\plugins\font-awesome\solid.min.css" />
+    <Content Include="Content\plugins\font-awesome\svg-with-js.min.css" />
+    <Content Include="Content\plugins\font-awesome\v4-shims.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -317,6 +324,12 @@
     <Content Include="Scripts\locales\bootstrap-datepicker.zh-CN.min.js" />
     <Content Include="Scripts\locales\bootstrap-datepicker.zh-TW.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\plugins\font-awesome\all.min.js" />
+    <Content Include="Scripts\plugins\font-awesome\brands.min.js" />
+    <Content Include="Scripts\plugins\font-awesome\fontawesome.min.js" />
+    <Content Include="Scripts\plugins\font-awesome\regular.min.js" />
+    <Content Include="Scripts\plugins\font-awesome\solid.min.js" />
+    <Content Include="Scripts\plugins\font-awesome\v4-shims.min.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />

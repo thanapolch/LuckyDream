@@ -26,6 +26,25 @@ namespace LuckyDream
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
                       "~/Content/myStyle.css"));
+            
+            bundles.Add(new StyleBundle("~/Content/font-awesome").Include(
+                      "~/Content/plugins/font-awesome/all.min.css",
+                      "~/Content/plugins/font-awesome/brands.min.css",
+                      "~/Content/plugins/font-awesome/fontawesome.min.css",
+                      "~/Content/plugins/font-awesome/regular.min.css",
+                      "~/Content/plugins/font-awesome/solid.min.css",
+                      "~/Content/plugins/font-awesome/svg-with-js.min.css",
+                      "~/Content/plugins/font-awesome/v4-shims.min.css"
+                      ));
+            
+            bundles.Add(new ScriptBundle("~/bundles/font-awesome").Include(
+                        "~/Scripts/plugins/font-awesome/all.min.js",
+                        "~/Scripts/plugins/font-awesome/brands.min.js",
+                        "~/Scripts/plugins/font-awesome/fontawesome.min.js",
+                        "~/Scripts/plugins/font-awesome/regular.min.js",
+                        "~/Scripts/plugins/font-awesome/solid.min.js",
+                        "~/Scripts/plugins/font-awesome/v4-shims.min.js"
+                        ));
         }
     }
 }
