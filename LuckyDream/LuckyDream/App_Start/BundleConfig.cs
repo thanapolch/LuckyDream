@@ -24,7 +24,6 @@ namespace LuckyDream
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css",
                       "~/Content/myStyle.css"));
             
             bundles.Add(new StyleBundle("~/Content/font-awesome").Include(

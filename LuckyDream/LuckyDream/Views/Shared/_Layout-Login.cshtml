@@ -14,11 +14,13 @@
 
         body, html {
             height: 100%;
+            background: #fafafa;
         }
     </style>
     @RenderSection("Styles", required: false)
 </head>
 <body>
+    @Html.Partial("_Top-Navbar")
     <div class="container body-content">
         @RenderBody()
         <hr />

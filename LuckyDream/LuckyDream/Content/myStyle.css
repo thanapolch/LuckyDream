@@ -15,13 +15,13 @@
     display:block;
 }
 
-    .input-login:focus {
-        color: #495057;
-        background-color: #fff;
-        border-color: #dc3545;
-        outline: 0;
-        box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
-    }
+.input-login:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #7d7d7d;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(125, 125, 125, 0.25);
+}
 
 .button-login {
     height: 50px;
