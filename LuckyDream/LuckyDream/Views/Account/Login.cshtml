@@ -3,46 +3,90 @@
 @{
     ViewBag.Title = "Login";
     Layout = "~/Views/Shared/_Layout-Login.cshtml";
+    var ImgJedi = "../Images/jedi.png";
+    var ImgJediOpen = "../Images/jedi-open.png";
 }
+<div class="container">
+    <div class="panel panel-default login-contain">
+        @*<div class="panel-heading text-center">
+            <h2>
+                WELCOME
+            </h2>
+        </div>*@
+        <div class="panel-body">
+            <div class="col-12 col-md-6 offset-sm-3">
+                <div class="row">
+                    @using (Html.BeginForm("Index", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-login" }))
+                    {
+
+                        <div class="text-center login-icon ">
+                            @*<div class="image-circle"></div>*@
+                            <img src="@ImgJedi" alt="Login" id="image-jedi" onmouseover="hover();" onmouseout="unhover();" class="image-circle">
+                        </div>
+                        <div class="input-group mb-3">
+                            @Html.TextBoxFor(x => x.UserName, new { @class = "form-control input-login user-icon", placeholder = "Username", required = "required" , autocomplete = "off" })
+
+                        </div>
+                        <div class="form-group mb-3">
+                            @Html.TextBoxFor(x => x.Password, new { @class = "form-control input-login", placeholder = "Password", type = "password", required = "required", autocomplete = "off" })
+                        </div>
+                        <div>
+                            <button class="btn btn-primary button-login" type="submit">Login</button>
+                            <button class="btn btn-outline-danger button-login">Forgot Password</button>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 @section Styles{
 
     <style>
 
-        .container {
-            /*background-color: gray;*/
+        .login-contain {
+            background-color: #fff;
             padding: 25px;
+            border: 1px solid #dee2e6 !important;
+        }
+
+        .login-Header {
+            border: 1px solid #dee2e6 !important;
+        }
+
+        .image-circle {
+            width: 100px;
+            height: 100px;
+            /*position: relative;
+            overflow: hidden;*/
+            border-radius: 50%;
+            border: 2px solid #007bff !important;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.1);
+        }
+
+        .login-icon {
+            margin: 10px;
         }
     </style>
 
 }
-<h2>Login</h2>
-<div class="container">
-    @*<div class="col align-self-center container">*@
-        <div class="col-12 col-md-6 offset-sm-3">
+@section Scripts {
+    <script>
+        $('.input-login').focus(function () {
+            hover();
+        });
+        $('.input-login').focusout(function () {
+            unhover();
+        });
 
-            <div class="row">
-                @using (Html.BeginForm("Index", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-login" }))
-                {
+        function hover() {
+            $('#image-jedi').attr('src', '@ImgJediOpen');
+        }
 
-                    @*<div class="form-group mb-3">
-                            @Html.LabelFor(x => x.UserName)
-                            @Html.TextBoxFor(x => x.UserName, new { @class = "form-control input-login" })
-                        </div>*@
-                    <div class="input-group mb-3">
-                        @Html.TextBoxFor(x => x.UserName, new { @class = "form-control input-login user-icon", placeholder = "Username", required = "required" })
-
-                    </div>
-                    <div class="form-group mb-3">
-                        @Html.TextBoxFor(x => x.Password, new { @class = "form-control input-login", placeholder = "Password", type = "password" })
-                    </div>
-                    <div>
-                        <button class="btn btn-primary button-login" type="submit">Login</button>
-                        <button class="btn btn-outline-danger button-login">Forgot Password</button>
-                    </div>
-                }
-
-            </div>
-
-        </div>
-    @*</div>*@
-</div>
+        function unhover() {
+            $('#image-jedi').attr('src', '@ImgJedi');
+        }
+    </script>
+}
