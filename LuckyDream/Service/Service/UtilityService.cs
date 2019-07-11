@@ -9,5 +9,6 @@ namespace Service.Service
 {
     public class UtilityService : IUtilityService
     {
+        
     }
 }
